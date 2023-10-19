@@ -1,7 +1,12 @@
+import Products from "./components/Products";
+import ProductForm from "./components/ProductForm";
 
 const App = () => {
   return (
-    <div>Hello World</div>
+    <>
+      <ProductForm />
+      <Products />
+    </>
   )
 }
 
