@@ -1,39 +1,18 @@
 {
   "products": [
     {
-      "name": "Mouse",
-      "description": "Mouse tradicional",
-      "price": "100",
-      "inStock": true,
+      "name": "Pantalla",
+      "description": "Led",
+      "price": "10000",
+      "exist": "2",
       "id": 1
     },
     {
-      "name": "Laptop",
-      "description": "Laptop de 14\"",
-      "price": "10000",
-      "inStock": true,
+      "name": "Carlos",
+      "description": "123123",
+      "price": "200",
+      "exist": "2",
       "id": 2
-    },
-    {
-      "name": "Laptop gaming",
-      "description": "Laptop gaming",
-      "price": "18000",
-      "inStock": true,
-      "id": 3
-    },
-    {
-      "name": "Keyboard",
-      "description": "Keyboard",
-      "price": "200",
-      "inStock": true,
-      "id": 4
-    },
-    {
-      "name": "Mouse gaming",
-      "description": "Mouse gaming",
-      "price": "200",
-      "inStock": true,
-      "id": 5
     }
   ]
 }

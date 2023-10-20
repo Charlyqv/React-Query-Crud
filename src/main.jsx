@@ -8,6 +8,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 //////INSTALL/////
 // npm i @tanstack/react-query
 // npm i @tanstack/react-query-devtools
+// npm install sweetalert2
+// npm install --save font-awesome
 
 const queryClient = new QueryClient();
 
