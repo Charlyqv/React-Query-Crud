@@ -26,6 +26,29 @@ function Products({ setValor }) {
       queryClient.invalidateQueries('products')
     }
   });
+
+  // let updateProductMutation = async (v) => {
+  //     await updateProduct(v);
+  //     console.log("🚀 ~ file: Products.jsx:28 ~ updateProductMutation ~ prod:", prod);
+  //   }
+
+  const prod ='';
+
+  function updateProductMutation(id){
+    // console.log("🚀 ~ file: Products.jsx:38 ~ updateProductMutation ~ id:", id);
+    const prod = async (id) => {
+      await updateProduct(id);
+      console.log("🚀 ~ file: Products.jsx:28 ~ updateProductMutation ~ prod:", prod);
+    }
+    
+    // const {data:prod} = useQuery({
+    //   queryKey: ['product', id],
+    //   queryFn: async () => {
+    //     updateProduct(id)
+    //   }
+    // })
+  }
+  console.log("🚀 ~ file: Products.jsx:32 ~ updateProductMutation ~ prod:", prod);
     
   if (isLoading) return <div>Loading...</div>
   else if (isError) return <div>Error: {error.message}</div>
@@ -63,7 +86,7 @@ function Products({ setValor }) {
                   <button 
                     id="update" 
                     onClick={() => 
-                      handleClick(product.id)}>
+                      updateProductMutation(product.id)}>
                   Editar</button>
 
                   <button id="delete" onClick={() => {
@@ -82,8 +105,3 @@ function Products({ setValor }) {
 }
 
 export default Products;
-
-
-// const updateProductMutation = async (id) => {
-//   const prod = await updateProduct(id);
-// }

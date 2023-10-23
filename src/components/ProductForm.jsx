@@ -1,10 +1,27 @@
-import { useMutation, useQueryClient, useQuery, useBaseQuery} from "@tanstack/react-query";
+import { useMutation, useQueryClient, useQuery} from "@tanstack/react-query";
 import { createProduct, updateProduct } from "../api/productsAPI";
 import Swal from "sweetalert2";
 import 'sweetalert2/dist/sweetalert2.css';
-import { useQueries } from "react-query";
 
 function ProductForm({ valor }) {
+// console.log("🚀 ~ file: ProductForm.jsx:8 ~ ProductForm ~ valor:", valor);
+
+// const product = '';
+// const useGetPostById = ( valor ) => {
+//   const service = getQueryService();
+//   const queryClient = useQueryClient();
+//   const { data: product } = useQuery(["product", valor], () => service.getPostById(valor));
+//   return {
+//     product,
+//   };
+// }
+// console.log("🚀 ~ file: ProductForm.jsx:15 ~ useGetPostById ~ product:", product);
+
+// const Component = () => {
+//   const id = 10;
+//   const { post } =  useGetPostById(id)
+//   ...
+// }
 
   function borrarContenido() {
     var nombreInput = document.getElementById("name");
@@ -30,16 +47,16 @@ function ProductForm({ valor }) {
     }
   });
 
-  let v = valor;
-  function useProd(v){
-    return useBaseQuery(["post", v], () => updateProduct(v), {
-      enabled: !!v,
-    });
-  }
+  // let v = valor;
+  // function useProd(v){
+  //   return useBaseQuery(["post", v], () => updateProduct(v), {
+  //     enabled: !!v,
+  //   });
+  // }
 
-  const { data } = useProd(v);
+  // const { data } = useProd(v);
 
-  console.log("🚀 ~ file: ProductForm.jsx:41 ~ ProductForm ~ data:", data);
+  // console.log("🚀 ~ file: ProductForm.jsx:41 ~ ProductForm ~ data:", data);
   
   
   // const {data: prod} = useQuery({
@@ -58,7 +75,7 @@ function ProductForm({ valor }) {
 
   // let updateProductMutation = async (v) => {
   //   await updateProduct(v);
-  //   // console.log("🚀 ~ file: Products.jsx:28 ~ updateProductMutation ~ prod:", prod);
+  //   console.log("🚀 ~ file: Products.jsx:28 ~ updateProductMutation ~ prod:", prod);
   // }
   // console.log("🚀 ~ file: ProductForm.jsx:39 ~ updateProductMutation ~ updateProductMutation:", updateProductMutation);
 
